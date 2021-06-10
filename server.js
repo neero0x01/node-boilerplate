@@ -1,5 +1,5 @@
-const express = require('express')
-const alert = require('awesome-cli-alerts')
+import express from 'express'
+import alert from 'awesome-cli-alerts'
 
 const app = express()
 const PORT = process.env.PORT || 3000

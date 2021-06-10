@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Boost productivity and save time with Eslint and prettier already configured for you",
   "main": "server.js",
+  "type": "module",
   "eslintConfig": {
     "extends": [
       "wesbos"
