@@ -2,9 +2,30 @@
   "name": "your-project",
   "version": "1.0.0",
   "description": "Boost productivity and save time with Eslint and prettier already configured for you",
-  "main": "index.js",
+  "main": "server.js",
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "no-console": 2,
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "printWidth": 120,
+          "tabWidth": 2
+        }
+      ]
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -21,13 +42,25 @@
   },
   "homepage": "https://github.com/neero0x01/node-boilerplate#readme",
   "devDependencies": {
-    "eslint": "^7.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-node": "^4.1.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.0"
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.3.1"
+  },
+  "dependencies": {
+    "awesome-cli-alerts": "^1.0.2",
+    "express": "^4.17.1"
   }
 }
